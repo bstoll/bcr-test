@@ -13,9 +13,12 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        path: "${{ github.event.repository.name }}-${{ github.ref_name }}"
     - name: Create source tarball
       run: |
-        tar czvf ${{ github.event.repository.name }}-${{ github.ref_name }}.tar.gz .
+        tar czvf ${{ github.event.repository.name }}-${{ github.ref_name }}.tar.gz ${{ github.event.repository.name }}-${{ github.ref_name }}
     - name: Upload release artifact
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
