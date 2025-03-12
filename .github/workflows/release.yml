@@ -9,7 +9,6 @@ jobs:
   release:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
       contents: write
     steps:
     - name: Checkout
