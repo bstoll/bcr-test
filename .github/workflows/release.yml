@@ -23,4 +23,4 @@ jobs:
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        gh release upload ${{ github.ref_name }} ${{ github.event.repository.name }}-${{ github.ref_name }}.tar.gz
+        gh release -R ${{ github.repository }} upload ${{ github.ref_name }} ${{ github.event.repository.name }}-${{ github.ref_name }}.tar.gz
