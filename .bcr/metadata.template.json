@@ -1,0 +1,13 @@
+{
+    "homepage": "https://github.com/bstoll/bcr-test",
+    "maintainers": [
+        {
+            "email": "bstoll@google.com",
+            "github": "bstoll",
+            "name": "Brandon Stoll"
+        }
+    ],
+    "repository": ["github:bstoll/bcr-test"],
+    "versions": [],
+    "yanked_versions": {}
+}
